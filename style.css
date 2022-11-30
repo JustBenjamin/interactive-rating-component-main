@@ -1,0 +1,110 @@
+body {
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Overpass', sans-serif;
+  }
+
+  main {
+    width: 350px;
+    background-color:   hsl(213, 19%, 18%); 
+    border-radius: 45px;
+    padding: 2rem;
+  }
+
+
+.star > img{
+  background-color:  hsl(216, 12%, 8%);
+  padding: 1rem 1rem;
+  border-radius: 50%;
+}
+
+h1 {
+    font-weight: 700;
+  }
+
+  p {
+    
+    font-size: 15px;
+
+  }
+
+  .ratings {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+span {
+  background-color:  hsl(216, 12%, 8%);
+  padding: 1rem 1.3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+span:hover {
+  background-color: hsl(217, 12%, 63%);
+} 
+
+button {
+  width: 100%;
+  color: #fff;
+  background-color: hsl(25, 97%, 53%);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  letter-spacing: 0.2rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+
+.response {
+  display: none;
+  text-align: center;
+}
+
+.response > img {
+  margin: auto;
+}
+
+.statement {
+  color:hsl(25, 97%, 53%);
+  padding: 5px 10px;
+  border-radius: 20px;
+  background-color:  hsl(216, 12%, 8%);
+}
+
+
+
+    .attribution { 
+      font-size: 11px; 
+      text-align: center; 
+      position: fixed;
+      bottom: 2%;
+      left: 5%;
+    }
+    .attribution a { color: hsl(0, 0%, 100%); }
+    .attribution a:hover{ color: hsl(228, 45%, 44%); }
+
+
+
+    @media screen and (max-width: 480px) {
+      main {
+        width: 72vw;
+      }
+
+      span {
+        padding: 0.6rem 1rem;
+      }
+      
+    }
+    

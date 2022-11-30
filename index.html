@@ -8,106 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<meta name="author" content="Benjamin Hove">
   
   <title>Interactive rating component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    body {
-      box-sizing: border-box;
-      color: #fff;
-      background-color: #000;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Overpass', sans-serif;
-    }
-
-    main {
-      width: 350px;
-      background-color:   hsl(213, 19%, 18%); 
-      border-radius: 45px;
-      padding: 2rem;
-    }
-
-
-  .star > img{
-    background-color:  hsl(216, 12%, 8%);
-    padding: 1rem 1rem;
-    border-radius: 50%;
-  }
-
-
-  h1 {
-    font-weight: 700;
-  }
-
-  p {
-    
-    font-size: 15px;
-
-  }
-
-  .ratings {
-    margin: 2rem 0;
-    display: flex;
-    justify-content: space-between;
-  }
-
-
-
-span {
-  background-color:  hsl(216, 12%, 8%);
-  padding: 1rem 1.3rem;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-span:hover {
-  background-color: hsl(217, 12%, 63%);
-} 
-
-button {
-  width: 100%;
-  color: #fff;
-  background-color: hsl(25, 97%, 53%);
-  border: none;
-  border-radius: 20px;
-  padding: 10px 15px;
-  letter-spacing: 0.2rem;
-}
-
-
-.response {
-  display: none;
-  text-align: center;
-}
-
-.response > img {
-  margin: auto;
-}
-
-.statement {
-  color:hsl(25, 97%, 53%);
-  padding: 5px 10px;
-  border-radius: 20px;
-  background-color:  hsl(216, 12%, 8%);
-}
-
-
-
-    .attribution { 
-      font-size: 11px; 
-      text-align: center; 
-      position: fixed;
-      bottom: 2%;
-      left: 2%;
-    }
-    .attribution a { color: hsl(0, 0%, 100%); }
-    .attribution a:hover{ color: hsl(228, 45%, 44%); }
-    
-  </style>
 </head>
 <body>
 
@@ -136,7 +42,7 @@ button {
 
   <!-- Thank you state start -->
 
-    <div class="response" id="response">
+    <div class="response" id="response" role="application">
       <img src="./images/illustration-thank-you.svg" alt="thank you graphic"/>
 
       <div id="result" style=" margin-top: 20px;"></div> 
@@ -148,54 +54,13 @@ button {
     </div>
   </main>
 
-
-
-
-  
+<!-- Footer -->  
   <div class="attribution" role="textbox">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://benjaminhove.com">Benjamin Hove</a>.
   </div>
 
-<script>
-
-
-let rateValue = 0
-
-
-function number(digit) {
-switch(digit) {
-  case 1:
-  rateValue = 1;
-  break;
-  case 2:
-  rateValue = 2;
-  break;
-  case 3:
-  rateValue = 3;
-  break;
-  case 4:
-  rateValue = 4;
-  break;
-  default:
-  rateValue = 5;
-
-}
- 
-}
-
-
-
-
-function rate() {
-  document.getElementById("prompt").style.display = "none";
-  document.getElementById("response").style.display = "block";
-  document.getElementById("result").innerHTML = `<span class="statement">You selected ${rateValue} out of 5</span>`
-
-    console.log("pressed")
-}
-
-</script>
+<script src="script.js" ></script>
 
 </body>
 </html>
